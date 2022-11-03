@@ -76,22 +76,58 @@ h1 {
   line-height: 1.9rem;
 }
 
-.other-articles .image-and-text {
+.other-articles {
+  height: 33%;
+  margin-top: 2.5rem;
+}
+
+.image-and-text {  
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  /* max-height: 5rem; */
-  margin: 5% 0;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 10rem;  
 }
 
-.image-and-text .other-articles-image {
-  /* max-height: 50px; */
-  grid-column: 0;
-
+.other-articles-image {
+  display: flex;
+  min-height: 4rem;
+  object-fit: scale-down;
+  padding:1rem 0 1rem 0;  
 }
 
-.image-and-text .text-beside-image {
+.text-beside-image {
   grid-column: 2;
+  padding-left: 1rem;
 }
+.text-beside-image h2 {
+  color:hsl(233, 8%, 79%);
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+  margin-top: 1rem;
+}
+
+.text-beside-image h3 {
+  margin-top: 0;
+}
+
+.text-beside-image p {
+  line-height: 1.7rem;
+  margin-right: 1rem;
+  color:hsl(233, 8%, 79%);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+#image1 {
+  grid-row: 1;
+}
+#image2 {
+  grid-row: 2;
+}
+#image3 {
+  grid-row: 3;
+}
+
+
 
 .attribution {
   font-size: 11px;
