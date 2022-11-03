@@ -1,0 +1,102 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  padding: 5% 5%;
+  margin: 0 auto;
+  background-color: hsl(36, 100%, 99%);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5% 0 7%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  letter-spacing: -.05rem;
+  line-height: 3rem;
+}
+
+.red-callout {
+  background-color: hsl(5, 85%, 63%);
+  margin: 10% 40% 10% 0;
+  height: 4rem;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.black-box {
+  background-color: hsl(240, 100%, 5%);
+}
+
+.black-box .orange-headline {
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5%;
+}
+
+.black-box {
+  color: hsl(0, 0%, 63%);
+  font-weight: 400;
+  padding: 8% 7% 8% 8%;
+}
+
+.black-box .title {
+  color:hsl(0, 0%, 97%);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1rem 0 .5rem 0;
+  display: block;
+}
+
+.black-box .white-divider {
+  border: none;
+  background-color: hsl(36, 100%, 99%);
+  height: 1px;
+  margin: 10% 0;
+}
+
+.black-box-text {
+  line-height: 1.9rem;
+}
+
+.other-articles .image-and-text {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* max-height: 5rem; */
+  margin: 5% 0;
+}
+
+.image-and-text .other-articles-image {
+  /* max-height: 50px; */
+  grid-column: 0;
+
+}
+
+.image-and-text .text-beside-image {
+  grid-column: 2;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
