@@ -1,8 +1,15 @@
 body {
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
 }
 
 main {
@@ -16,15 +23,47 @@ main {
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 5% 0 7%;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  color: hsl(233, 8%, 79%);
+}
+.nav-links a {
+  font-size: 1rem;
+  color: hsl(233, 8%, 79%);
+}
+
+.nav-links a:hover {
+  color:hsl(5, 85%, 63%);
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li:hover {
+  color: hsl(5, 85%, 63%);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 1px;
+}
+
+
 h1 {
   font-weight: 800;
   font-size: 3rem;
-  letter-spacing: -.05rem;
+  letter-spacing: -0.05rem;
   line-height: 3rem;
 }
 
@@ -58,10 +97,10 @@ h1 {
 }
 
 .black-box .title {
-  color:hsl(0, 0%, 97%);
+  color: hsl(0, 0%, 97%);
   font-size: 1.4rem;
   font-weight: 600;
-  margin: 1rem 0 .5rem 0;
+  margin: 1rem 0 0.5rem 0;
   display: block;
 }
 
@@ -81,17 +120,17 @@ h1 {
   margin-top: 2.5rem;
 }
 
-.image-and-text {  
+.image-and-text {
   display: grid;
   grid-template-columns: 30% 70%;
-  grid-template-rows: 10rem;  
+  grid-template-rows: 10rem;
 }
 
 .other-articles-image {
   display: flex;
   min-height: 4rem;
   object-fit: scale-down;
-  padding:1rem 0 1rem 0;  
+  padding: 1rem 0 1rem 0;
 }
 
 .text-beside-image {
@@ -99,7 +138,7 @@ h1 {
   padding-left: 1rem;
 }
 .text-beside-image h2 {
-  color:hsl(233, 8%, 79%);
+  color: hsl(233, 8%, 79%);
   font-size: 1.8rem;
   margin-bottom: 0.2rem;
   margin-top: 1rem;
@@ -112,22 +151,56 @@ h1 {
 .text-beside-image p {
   line-height: 1.7rem;
   margin-right: 1rem;
-  color:hsl(233, 8%, 79%);
+  color: hsl(233, 8%, 79%);
   font-size: 0.95rem;
   font-weight: 500;
 }
 
-#image1 {
-  grid-row: 1;
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type="checkbox"] {
+  display: none;
 }
-#image2 {
-  grid-row: 2;
+/*HAMBURGER MENU*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
 }
-#image3 {
-  grid-row: 3;
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
 }
-
-
 
 .attribution {
   font-size: 11px;
