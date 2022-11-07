@@ -21,51 +21,54 @@ main {
   background-color: hsl(36, 100%, 99%);
 }
 
-header {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5% 0 7%;
+  padding: 5% 0 10% 0;
 }
 
-.navbar {
+.logo {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  color: hsl(233, 8%, 79%);
-  width:100%;
+  align-items: center;
 }
-.nav-links a {
-  font-size: 1rem;
-  color: hsl(233, 8%, 79%);
-  justify-self: flex-end;
-}
-
-.nav-links a:hover {
-  color:hsl(5, 85%, 63%);
-}
-
-.navbar img {
-  justify-self: flex-start;
-}
-
-/* NAVBAR MENU */
 .menu {
-  display: flex;
-  gap: 1em;
-  font-size: 18px;
+  display: none;
+  background-color: white;
+  right: 0;
+  left: 0;
+  text-align: center;
+  /* padding: 16px 0; */
 }
 .menu li:hover {
-  color: hsl(5, 85%, 63%);
-  border-radius: 5px;
+  display: inline-block;
+  background-color: #4c9e9e;
   transition: 0.3s ease;
 }
-.menu li {
-  padding: 5px 1px;
-  justify-self:flex-end;
+
+input[type="checkbox"]:checked ~ .menu {
+  display: block;
+}
+.hamburger {
+  display: block;
+}
+.dropdown {
+  left: 50%;
+  top: 30px;
+  transform: translateX(35%);
+}
+.dropdown li:hover {
+  background-color: #4c9e9e;
 }
 
+.mobile-main-image img {
+  max-width: 100%;
+}
+
+.desktop-main-image img {
+  display: none;
+}
 
 h1 {
   font-weight: 800;
@@ -144,6 +147,7 @@ h1 {
   grid-column: 2;
   padding-left: 1rem;
 }
+
 .text-beside-image h2 {
   color: hsl(233, 8%, 79%);
   font-size: 1.8rem;
@@ -163,52 +167,90 @@ h1 {
   font-weight: 500;
 }
 
-/*RESPONSIVE NAVBAR MENU STARTS*/
 /* CHECKBOX HACK */
 input[type="checkbox"] {
   display: none;
 }
-/*HAMBURGER MENU*/
-.hamburger {
-  display: none;
-  font-size: 24px;
-  user-select: none;
-}
+
 /* APPLYING MEDIA QUERIES */
-@media (max-width: 768px) {
-  .menu {
+@media (min-width: 768px) {
+  .navbar {
+    color: hsl(233, 8%, 79%);
+    width: 100%;
+  }
+
+  /*RESPONSIVE NAVBAR MENU STARTS*/
+  /* CHECKBOX HACK */
+  input[type="checkbox"] {
     display: none;
-    position: absolute;
-    background-color: teal;
-    right: 0;
-    left: 0;
-    text-align: center;
-    padding: 16px 0;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+  /*HAMBURGER MENU*/
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+  }
+  .nav-links a {
+    font-size: 1rem;
+    color: hsl(233, 8%, 79%);
+    justify-self: flex-end;
+  }
+
+  .nav-links a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+
+  .navbar img {
+    justify-self: flex-start;
+  }
+
+  /* NAVBAR MENU */
+  .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
   }
   .menu li:hover {
-    display: inline-block;
-    background-color: #4c9e9e;
+    color: hsl(5, 85%, 63%);
+    border-radius: 5px;
     transition: 0.3s ease;
   }
-  .menu li + li {
-    margin-top: 12px;
+  .menu li {
+    padding: 5px 1px;
+    justify-self: flex-end;
   }
-  input[type="checkbox"]:checked ~ .menu {
+
+  body {
+    max-width: 1440px;
+    background-color: white;
+    font-family: "Inter", sans-serif;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    padding: 5% 5%;
+    margin: 0 auto;
+    background-color: hsl(36, 100%, 99%);
+  }
+
+  .mobile-main-image img {
+    display: none;
+  }
+
+  .desktop-main-image img {
     display: block;
-  }
-  .hamburger {
-    display: block;
-  }
-  .dropdown {
-    left: 50%;
-    top: 30px;
-    transform: translateX(35%);
-  }
-  .dropdown li:hover {
-    background-color: #4c9e9e;
   }
 }
-
 .attribution {
   font-size: 11px;
   text-align: center;
