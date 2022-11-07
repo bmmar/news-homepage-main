@@ -23,7 +23,7 @@ main {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 5% 0 7%;
 }
@@ -31,17 +31,23 @@ header {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 10px;
   color: hsl(233, 8%, 79%);
+  width:100%;
 }
 .nav-links a {
   font-size: 1rem;
   color: hsl(233, 8%, 79%);
+  justify-self: flex-end;
 }
 
 .nav-links a:hover {
   color:hsl(5, 85%, 63%);
+}
+
+.navbar img {
+  justify-self: flex-start;
 }
 
 /* NAVBAR MENU */
@@ -57,6 +63,7 @@ header {
 }
 .menu li {
   padding: 5px 1px;
+  justify-self:flex-end;
 }
 
 
