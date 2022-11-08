@@ -33,22 +33,43 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
+.nav-links {
+  position: fixed;
+  top: 2rem;
+  left: 18.2rem;
+  width: 12rem;
+  min-height: 100rem;
+  background-color: beige;
+  display: none;
+}
+
+#exit {
+  text-align: right;
+  margin: 2rem 0;
+}
+
 .menu {
   display: none;
-  background-color: white;
-  right: 0;
-  left: 0;
-  text-align: center;
-  /* padding: 16px 0; */
+  background-color: beige;
+  position: relative;
+  top: 30%;
+  left: -33px;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2rem;
 }
 .menu li:hover {
-  display: inline-block;
+  /* display: inline-block; */
   transition: 0.3s ease;
 }
 
 input[type="checkbox"]:checked ~ .menu {
   display: block;
 }
+
 .hamburger {
   display: block;
 }
@@ -130,10 +151,10 @@ h1 {
 }
 
 .image-and-text1,
-  .image-and-text2,
-  .image-and-text3 {
-    display: flex;
-  }
+.image-and-text2,
+.image-and-text3 {
+  display: flex;
+}
 
 .image-and-text {
   /* margin-top: 2rem; */
@@ -203,7 +224,20 @@ input[type="checkbox"] {
     display: none;
   }
 
+  .menu {
+    background-color: transparent;
+    display: inline-block;
+  }
+
+  .menu li {
+    display: inline-block;
+  }
+
   .menu-icon {
+    display: none;
+  }
+
+  #exit {
     display: none;
   }
   /*HAMBURGER MENU*/
@@ -216,10 +250,20 @@ input[type="checkbox"] {
     font-size: 1rem;
     color: hsl(233, 8%, 79%);
     justify-self: flex-end;
+    display: inline;
   }
 
   .nav-links a:hover {
     color: hsl(5, 85%, 63%);
+  }
+
+  .nav-links {
+    display: inline;
+    background-color: transparent;
+    position: unset;
+    width:auto;
+    min-height: 0%;
+    margin-right: -3%;;
   }
 
   .navbar img {
@@ -384,7 +428,7 @@ input[type="checkbox"] {
     min-width: 6rem;
   }
 
-  .other-articles-image img{
+  .other-articles-image img {
     display: flex;
     max-height: 66%;
     padding: 1rem 0 1rem 0;
@@ -393,7 +437,7 @@ input[type="checkbox"] {
   }
 
   .text-beside-image {
-    padding-left: .8rem;
+    padding-left: 0.8rem;
   }
   .text-beside-image h2 {
     color: hsl(233, 8%, 79%);
