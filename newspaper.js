@@ -4,12 +4,11 @@ const navLinks = document.querySelector(".nav-links");
 const exitMenu = document.querySelector("#exit");
 
 menuIcon.addEventListener('click', () => { 
-    console.log("Icon pressed!");
-    navLinks.style.display = "block";
-    menu.style.display = "block";
+    menu.classList.remove("turn-off");
+    menuIcon.classList.add("turn-off");
 })
 
 exitMenu.addEventListener('click', () => { 
-    navLinks.style.display = "none";
-    menu.style.display = "none";
+    menu.classList.add(turn-off);
+    menuIcon.classList.remove("turn-off");
 })
