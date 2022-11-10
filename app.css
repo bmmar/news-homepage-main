@@ -43,6 +43,10 @@ nav {
   align-items: center;
 }
 
+.menu-icon {
+  cursor: pointer;
+}
+
 .nav-links {
   grid-row: 2;
   width: 12rem;
@@ -53,7 +57,12 @@ nav {
 
 #exit {
   text-align: right;
-  margin: 2rem 0;
+  margin: 2rem 2rem;
+  cursor: pointer;
+}
+
+#exit li:hover{ 
+  color: red;
 }
 
 .layout {
@@ -67,7 +76,7 @@ nav {
   grid-row: 1;
   grid-column: 1;
   display: none;
-  background-color: beige;
+  background-color: hsl(36, 100%, 99%);
   text-align: left;
   padding-left: 10px;
   font-size: 1rem;
@@ -79,6 +88,7 @@ nav {
   justify-self: right;
   align-self: flex-start;
   color:hsl(233, 8%, 79%);
+  box-shadow: -5.5rem 0 rgb(0 0 0 / 50%);
 }
 .menu li:hover {
   /* display: inline-block; */
@@ -90,8 +100,9 @@ nav {
 }
 
 .menu li a {  
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.25rem;
+    font-weight: 600;
+    color: black;
 }
 
 input[type="checkbox"]:checked ~ .menu {
@@ -126,6 +137,11 @@ h1 {
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+.red-callout:hover {
+  background-color: black;
 }
 
 .black-box {
@@ -152,6 +168,11 @@ h1 {
   font-weight: 600;
   margin: 1rem 0 0.5rem 0;
   display: block;
+  cursor: pointer;
+}
+
+.black-box .title:hover {
+  color: hsl(35, 77%, 62%);
 }
 
 .black-box .white-divider {
@@ -212,6 +233,11 @@ h1 {
 
 .text-beside-image h3 {
   margin-top: 0;
+  cursor: pointer;
+}
+
+.text-beside-image h3:hover {
+  color: hsl(5, 85%, 63%);
 }
 
 .text-beside-image p {
@@ -302,6 +328,7 @@ input[type="checkbox"] {
     font-size: 18px;
     height:100%;
     width:auto;
+    box-shadow: none;
   }
   .menu li:hover {
     color: hsl(5, 85%, 63%);
@@ -315,6 +342,8 @@ input[type="checkbox"] {
 
   .menu li a {
     color: hsl(233, 8%, 79%);
+    font-size: 1rem;
+    font-weight: 300;
   }
 
   body {
@@ -500,10 +529,10 @@ input[type="checkbox"] {
   color: hsl(228, 45%, 44%);
 }
 
-.turn-off {
+.invisible {
   display: none;
 }
 
-.turn-on {
+.visible {
   display: block;
 }
