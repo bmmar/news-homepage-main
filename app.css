@@ -47,14 +47,6 @@ nav {
   cursor: pointer;
 }
 
-.nav-links {
-  grid-row: 2;
-  width: 12rem;
-  min-height: 100rem;
-  background-color: beige;
-  display: none;
-}
-
 #exit {
   text-align: right;
   margin: 2rem 2rem;
@@ -106,10 +98,6 @@ nav {
 }
 
 input[type="checkbox"]:checked ~ .menu {
-  display: block;
-}
-
-.hamburger {
   display: block;
 }
 
